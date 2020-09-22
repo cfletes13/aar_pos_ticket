@@ -81,7 +81,7 @@
         <table>
 			<tr><td>&#160;</td></tr>
 			<tr>
-				<td>Subtotal:      <t t-esc="widget.format_currency(order.get_total_before_tax())"/></td>
+				<td>Subtotal:      <strong><t t-esc="widget.format_currency(order.get_total_before_tax())"/></strong></td>
 				<!--td class="pos-left-align"-->
                 <!--td>
 				    <t t-esc="widget.format_currency(order.get_total_before_tax())"/>
@@ -91,7 +91,7 @@
 			<t t-foreach="order.get_tax_details()" t-as="taxdetail">
 				<tr>
 				    <!--td  style="border-bottom: dotted 1px #000"-->
-                    <td><t t-esc="taxdetail.name + ' ' + widget.format_currency(taxdetail.amount) " /></td>
+                    <td><strong><t t-esc="taxdetail.name + ' ' + widget.format_currency(taxdetail.amount) " /></strong></td>
                     <td  style="text-align:left border-bottom: dotted 1px #000">
 				    <!--td class="pos-left-align" style="text-align:right border-bottom: dotted 1px #000"-->
 				        <!--t t-esc="widget.format_currency(taxdetail.amount)"/-->
@@ -101,7 +101,7 @@
 
 			<!--tr class="emph"-->
             <tr>
-				<td  style="border-bottom: dotted 1px #000">Total:       <t t-esc="widget.format_currency(order.get_total_with_tax())"/></td>
+				<td  style="border-bottom: dotted 1px #000">Total:       <strong><t t-esc="widget.format_currency(order.get_total_with_tax())"/></strong></td>
 				<td class="pos-left-align"  style="border-bottom: dotted 1px #000">
 				    <!--t t-esc="widget.format_currency(order.get_total_with_tax())"/-->
 				</td>
@@ -113,7 +113,7 @@
     <t t-foreach="paymentlines" t-as="line">
       <tr>
           <td>
-              <t t-esc="line.name + ' ' + widget.format_currency(line.get_amount())"/>
+              <strong><t t-esc="line.name + ' ' + widget.format_currency(line.get_amount())"/></strong>
           </td>
           <td class="pos-left-align">
               <!--t t-esc="widget.format_currency(line.get_amount())"/-->
@@ -124,7 +124,7 @@
 
 <!--table class='receipt-change'-->
 <table class='receipt-change'>
-    <tr><td style="border-bottom: dotted 1px #000">Change:     <t t-esc="widget.format_currency(order.get_change())"/></td>
+    <tr><td style="border-bottom: dotted 1px #000">Change:     <strong><t t-esc="widget.format_currency(order.get_change())"/></strong></td>
         <td class="pos-left-align" style="border-bottom: dotted 1px #000">
             <!--t t-esc="widget.format_currency(order.get_change())"/-->
         </td>
