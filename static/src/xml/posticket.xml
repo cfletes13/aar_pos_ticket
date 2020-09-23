@@ -54,7 +54,8 @@
 					</div>
 
 			        <div t-if="!orderline.get_discount() > 0">
-			            Price : <t t-esc="widget.format_currency_no_symbol(orderline.price - orderline.get_tax())" />
+                        Price : <t t-esc="widget.format_currency_no_symbol(orderline.price)" />
+			                    <!--t t-esc="widget.format_currency_no_symbol(orderline.price - orderline.get_tax())" /-->
 			        </div>
 
 			        <div t-if="orderline.get_discount() > 0">
