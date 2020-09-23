@@ -49,7 +49,8 @@
 			    <td style="border-bottom: dotted 1px #000;padding-top:3px;">
 
 			        <div style="line-height: 1.1em;">
-						<t t-esc="orderline.get_product().default_code + ' ' + orderline.get_product().display_name"/>
+                        <strong><t t-esc="orderline.get_product().default_code"/></strong>
+						<!--t t-esc="orderline.get_product().default_code + ' ' + orderline.get_product().display_name"/-->
 					</div>
 
 			        <div t-if="!orderline.get_discount() > 0">
